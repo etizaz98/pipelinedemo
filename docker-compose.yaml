@@ -1,0 +1,13 @@
+version: "3"
+services:
+  demo:
+    build: .
+    container_name: demo
+    ports:
+      - 3000:3000
+    networks:
+      - bridge
+
+networks:
+  bridge:
+    driver: bridge
