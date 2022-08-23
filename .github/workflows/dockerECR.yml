@@ -64,6 +64,6 @@ jobs:
             rm -rf .env-backup &&
             mv .env .env-backup &&
             touch .env &&
-            echo ${{ steps.tag_version.outputs.new_tag }} >> .env &&
+            echo PIPELINE_VERSION=${{ steps.tag_version.outputs.new_tag }} >> .env &&
             sudo docker-compose up -d
           '
