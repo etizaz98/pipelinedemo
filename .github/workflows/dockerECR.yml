@@ -59,4 +59,5 @@ jobs:
 
             #Now we have got the access of EC2 and we will start the deploy .
             sudo -s &&
+            cd /home/ec2-user &&
             docker-compose down
