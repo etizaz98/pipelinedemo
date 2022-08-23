@@ -61,6 +61,9 @@ jobs:
             sudo -s &&
             ls &&
             cd /home/ec2-user && 
-            sudo export PIPELINE_VERSION=v0.0.10 &&
+            rm -rf .env-backup &&
+            mv .env .env-backup &&
+            touch .env &&
+            echo ${{ steps.tag_version.outputs.new_tag }} >> .env
             sudo docker-compose up -d
           '
