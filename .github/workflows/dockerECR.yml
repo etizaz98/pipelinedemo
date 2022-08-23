@@ -61,5 +61,6 @@ jobs:
             sudo -s &&
             ls &&
             cd /home/ec2-user && 
-            sudo docker-compose down
+            sudo export PIPELINE_VERSION=v0.0.10 &&
+            sudo docker-compose up -d
           '
