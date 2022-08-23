@@ -61,5 +61,5 @@ jobs:
             sudo -s &&
             ls &&
             cd /home/ec2-user && 
-            docker-compose down
+            sudo docker-compose down
           '
